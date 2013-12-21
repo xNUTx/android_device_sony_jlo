@@ -26,12 +26,10 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH_BCM := true
-TARGET_NEEDS_BLUETOOTH_INIT_DELAY := true
-TARGET_CUSTOM_BLUEDROID := ../../../device/sony/jlo/bluedroid/bluetooth.c
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/jlo/bluedroid
 
-# Custom vibrator
-BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/sony/jlo/vibrator/vibrator.c
+# CM Hardware tunables
+BOARD_HARDWARE_CLASS += device/sony/jlo/cmhw
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 16
