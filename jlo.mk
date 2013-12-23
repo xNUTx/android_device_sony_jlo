@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The CyanogenMod Project
+# Copyright (C) 2013 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ $(call inherit-product-if-exists, vendor/sony/jlo/jlo-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/sony/jlo/overlay
 
 # Inherit the tamsui-common definitions
-$(call inherit-product, device/sony/tamsui-common-legacy/tamsui.mk)
+$(call inherit-product, device/sony/tamsui-common/tamsui.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
@@ -38,11 +38,11 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Configuration scripts
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/init.device.rc:root/init.device.rc \
     device/sony/tamsui-common-legacy/prebuilt/logo_H.rle:root/logo.rle
 
 # USB function switching
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/init.device.rc:root/init.device.rc \
     $(LOCAL_PATH)/config/init.sony.usb.rc:root/init.sony.usb.rc
 
 PRODUCT_COPY_FILES += \
@@ -54,13 +54,6 @@ PRODUCT_COPY_FILES += \
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/bootrec-device:recovery/bootrec-device
-
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/rmt_storage:root/sbin/rmt_storage \
-    $(LOCAL_PATH)/prebuilt/ta_rmt_service:root/sbin/ta_rmt_service \
-    $(LOCAL_PATH)/prebuilt/tad:root/sbin/tad \
-    $(LOCAL_PATH)/prebuilt/wait4tad:root/sbin/wait4tad
 
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
