@@ -8,7 +8,9 @@ TARGET_USES_LEGACY_BOARD := true
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/jlo/include
 
-TARGET_KERNEL_CONFIG := cm_tamsui_jlo_defconfig
+TARGET_CPU_VARIANT := cortex-a5
+
+TARGET_KERNEL_CONFIG := cyanogen_jlo_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/jlo/config/cmdline.txt
 
 # Wifi related defines
@@ -35,7 +37,8 @@ BOARD_HARDWARE_CLASS += device/sony/jlo/cmhw
 BOARD_VOLD_MAX_PARTITIONS := 16
 
 # Recovery
-TARGET_RECOVERY_INITRC := device/sony/jlo/recovery/init.rc
+TARGET_RECOVERY_FSTAB := device/sony/jlo/config/fstab.sony
+RECOVERY_FSTAB_VERSION := 2
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 524288000
