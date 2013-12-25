@@ -1,1 +1,1 @@
-add_lunch_combo cm_jlo-eng
+add_lunch_combo cm_jlo-userdebug
