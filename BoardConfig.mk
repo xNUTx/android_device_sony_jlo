@@ -35,7 +35,7 @@ BOARD_KERNEL_CMDLINE := device/sony/jlo/config/cmdline.txt
 #BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/sony/tamsui-common/vibrator/vibrator.c
 
 # CM Hardware tunables
-BOARD_HARDWARE_CLASS += device/sony/jlo/cmhw
+# BOARD_HARDWARE_CLASS += device/sony/jlo/cmhw
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 16
