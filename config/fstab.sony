@@ -5,18 +5,18 @@
 # data partition must be located at the bottom for supporting device encryption
 
 
-#<src>                         <mnt_point> <type> <mnt_flags and options> <fs_mgr_flags>
+#<src>                                        <mnt_point> <type> <mnt_flags and options>                              <fs_mgr_flags>
 
-/dev/block/mmcblk0p10                         /system ext4 ro                                         wait
-/dev/block/mmcblk0p11                         /cache ext4 noatime,nosuid,nodev,nomblk_io_submit,errors=panic         wait,check
-/dev/block/mmcblk0p15                         /data ext4 noatime,nosuid,nodev,nomblk_io_submit,errors=panic                 wait,check,encryptable=/efs/metadata
+/dev/block/mmcblk0p10                         /system     ext4    ro                                                  wait
+/dev/block/mmcblk0p11                         /cache      ext4    noatime,nosuid,nodev,nomblk_io_submit,errors=panic  wait,check
+/dev/block/mmcblk0p15                         /data       ext4    noatime,nosuid,nodev,nomblk_io_submit,errors=panic  wait,check,encryptable=/efs/metadata
 
 ## Vold managed volumes ##
 
-/devices/platform/msm_sdcc.3/mmc_host/mmc0                 auto vfat defaults                          voldmanaged=sdcard:16
-/devices/platform/msm_sdcc.1/mmc_host auto vfat defaults                          voldmanaged=sdcard1:auto
+/devices/platform/msm_sdcc.3/mmc_host/mmc0    auto        vfat    defaults                                            voldmanaged=sdcard:16
+/devices/platform/msm_sdcc.1/mmc_host         auto        vfat    defaults                                            voldmanaged=sdcard1:auto
 
 ## Recovery only ##
-/dev/block/mmcblk0p3                                 /boot emmc defaults                                                                                                         recoveryonly
+/dev/block/mmcblk0p3                          /boot       emmc    defaults                                            recoveryonly
 
 
