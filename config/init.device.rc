@@ -37,7 +37,7 @@ on post-fs
     write /sys/module/msm_fb/parameters/align_buffer 1
 
 on emmc-fs
-        setprop ro.crypto.fuse_sdcard true
+    setprop ro.crypto.fuse_sdcard true
         
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
