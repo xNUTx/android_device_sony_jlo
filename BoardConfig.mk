@@ -6,8 +6,6 @@
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/jlo/include
 
-TARGET_CPU_VARIANT := cortex-a5
-
 TARGET_KERNEL_CONFIG := cyanogen_jlo_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/jlo/config/cmdline.txt
 
