@@ -75,3 +75,8 @@ $(call inherit-product-if-exists, vendor/sony/jlo/jlo-vendor.mk)
 BOARD_WLAN_DEVICE_REV := bcm4330_b1
 WIFI_BAND             := 802_11_ABG
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
+
+# Enable for debugging
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1
