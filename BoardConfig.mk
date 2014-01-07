@@ -35,8 +35,6 @@ BOARD_LEGACY_NL80211_STA_EVENTS  := true
 # CM Hardware tunables
 # BOARD_HARDWARE_CLASS += device/sony/jlo/cmhw
 
-# jlo is low-ram device
-PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 16
