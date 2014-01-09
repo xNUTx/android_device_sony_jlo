@@ -6,7 +6,7 @@
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/jlo/include
 
-TARGET_KERNEL_CONFIG := cyanogen_jlo_defconfig
+TARGET_KERNEL_CONFIG :=  cm_tamsui_jlo_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/jlo/config/cmdline.txt
 
 # WiFi
@@ -34,6 +34,9 @@ BOARD_LEGACY_NL80211_STA_EVENTS  := true
 
 # CM Hardware tunables
 # BOARD_HARDWARE_CLASS += device/sony/jlo/cmhw
+
+# jlo is low-ram device
+PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
 
 
 # Partition information

@@ -1,3 +1,15 @@
+on init
+    mkdir /mnt/shell/emulated 0700 shell shell
+    mkdir /storage/emulated 0555 root root
+
+    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
+    mkdir /storage/sdcard1 0700 root root
+
+    export EXTERNAL_STORAGE /storage/emulated/legacy
+    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
+    export EMULATED_STORAGE_TARGET /storage/emulated
+    export SECONDARY_STORAGE /storage/sdcard1
+    
 on early-boot
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 0FCE
@@ -5,25 +17,6 @@ on early-boot
     write /sys/class/android_usb/android0/functions mass_storage
     write /sys/class/android_usb/android0/enable 1
     exec /system/bin/battery_charging
-
-    chown root system /sys/class/input/input5/bandwidth
-    chown root system /sys/class/input/input5/debug
-    chown root system /sys/class/input/input5/delay
-    chown root system /sys/class/input/input5/enable
-    chown root system /sys/class/input/input5/interrupt
-    chown root system /sys/class/input/input5/mode
-    chown root system /sys/class/input/input5/range
-    chown root system /sys/class/input/input5/reg
-    chown root system /sys/class/input/input5/sensitivity
-    chown root system /sys/class/input/input5/value
-
-    chown system system /sys/class/compass/akm8975/enable_acc
-    chown system system /sys/class/compass/akm8975/enable_mag
-    chown system system /sys/class/compass/akm8975/enable_ori
-    chown system system /sys/class/compass/akm8975/delay_acc
-    chown system system /sys/class/compass/akm8975/delay_mag
-    chown system system /sys/class/compass/akm8975/delay_ori
-    chown system system /sys/class/compass/akm8975/accel
 
 on post-fs
     #Permission for Lights
@@ -35,10 +28,10 @@ on post-fs
 
     #buffer fix
     write /sys/module/msm_fb/parameters/align_buffer 1
-
+    
 on emmc-fs
-    setprop ro.crypto.fuse_sdcard true
-        
+	setprop ro.crypto.fuse_sdcard true
+	
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
 
