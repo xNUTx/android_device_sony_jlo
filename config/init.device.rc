@@ -11,9 +11,6 @@ on post-fs
     chown system system /sys/class/led/fih_led/control
     chown system system /sys/devices/virtual/graphics/fb0/msmfb_bl0/brightness
 
-    #Compas
-    chown system system /sys/class/compass/akm8975/accel
-    
     #vibrator
     chown system system /sys/class/vibrator/pmic-vib/control
 

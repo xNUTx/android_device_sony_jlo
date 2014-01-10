@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # Inherit the proprietary counterpart
-#$(call inherit-product-if-exists, vendor/sony/jlo/jlo-vendor.mk)
+$(call inherit-product-if-exists, vendor/sony/jlo/jlo-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/sony/jlo/overlay
 
