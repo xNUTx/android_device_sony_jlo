@@ -36,6 +36,8 @@ TARGET_CUSTOM_BLUEDROID := ../../../device/sony/tamsui-common/bluedroid/bluetoot
 # jlo is low-ram device
 PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
 
+BOARD_USE_MHEAP_SCREENSHOT := true
+
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 16
