@@ -12,11 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-# Torch
-PRODUCT_PACKAGES := \
-    Torch
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
@@ -26,9 +21,6 @@ $(call inherit-product, device/sony/tamsui-common/prebuilt/resources-hdpi.mk)
 # Inherit from jlo device
 $(call inherit-product, device/sony/jlo/jlo.mk)
 
-# Boot Animation
-TARGET_SCREEN_HEIGHT := 854
-TARGET_SCREEN_WIDTH := 480
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_jlo
