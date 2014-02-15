@@ -25,11 +25,12 @@ BOARD_LEGACY_NL80211_STA_EVENTS  := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/jlo/bluedroid
 
+
 # CM Hardware tunables
 # BOARD_HARDWARE_CLASS += device/sony/jlo/cmhw
 
 # jlo is low-ram device
-PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
+# PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
 
 
 # Partition information
