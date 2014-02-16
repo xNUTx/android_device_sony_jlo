@@ -17,6 +17,9 @@ TARGET_BOOTANIMATION_NAME := 480
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit device configuration
 $(call inherit-product, device/sony/jlo/full_jlo.mk)
 
