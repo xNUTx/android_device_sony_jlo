@@ -12,19 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit device configuration
-$(call inherit-product, device/sony/jlo/full_jlo.mk)
-
 # Boot Animation
 TARGET_BOOTANIMATION_NAME := 480
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
-# Inherit slim common GSM stuff.
+# Inherit device configuration
+$(call inherit-product, device/sony/jlo/full_jlo.mk)
+
+# Inherit some common stuff.
 $(call inherit-product, vendor/slim/config/gsm.mk)
 
-# Inherit Slim common Phone stuff.
+# Inherit some common stuff.
 $(call inherit-product, vendor/slim/config/common_full_phone.mk)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.camera.res=5MP
+
+# Release name
+PRODUCT_RELEASE_NAME := jlo
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=ST26i_1257-4009 BUILD_FINGERPRINT=SEMC/ST26i_1257-4009/ST26i:4.0.4/6.1.A.0.452/O_5_zw:user/release-keys PRIVATE_BUILD_DESC="ST26i-user 4.0.4 6.1.A.0.452 O_5_zw test-keys"
 
