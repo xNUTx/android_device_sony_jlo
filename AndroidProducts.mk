@@ -1,2 +1,3 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_jlo.mk
+    $(LOCAL_DIR)/aosp_jlo.mk \
+    $(LOCAL_DIR)/omni_jlo.mk

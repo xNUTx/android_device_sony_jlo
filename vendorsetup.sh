@@ -1,1 +1,1 @@
-add_lunch_combo cm_jlo-userdebug
+add_lunch_combo omni_jlo-userdebug
