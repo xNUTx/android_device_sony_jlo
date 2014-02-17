@@ -1,3 +1,3 @@
-$(call inherit-product, device/sony/yuga/omni_jlo.mk)
+$(call inherit-product, device/sony/jlo/omni.mk)
 
 PRODUCT_NAME := aosp_jlo
