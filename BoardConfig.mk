@@ -4,6 +4,8 @@
 #inherit from the common tamsui definitions
 -include device/sony/tamsui-common/BoardConfigCommon.mk
 
+DEVICE_RESOLUTION := 480x854
+
 TARGET_SPECIFIC_HEADER_PATH += device/sony/jlo/include
 
 TARGET_KERNEL_CONFIG :=  cm_tamsui_jlo_defconfig
@@ -53,3 +55,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p16
 
 TARGET_OTA_ASSERT_DEVICE := ST26i,ST26a,jlo
+
+TW_INTERNAL_STORAGE_PATH := "/sdcard"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "internal"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external"
+TW_FLASH_FROM_STORAGE := true
+#TARGET_PREBUILT_RECOVERY_KERNEL := device/sony/jlo/kernel
