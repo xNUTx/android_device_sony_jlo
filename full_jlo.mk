@@ -18,10 +18,6 @@ $(call inherit-product, device/sony/tamsui-common/prebuilt/resources-hdpi.mk)
 # Inherit from jlo device
 $(call inherit-product, device/sony/jlo/jlo.mk)
 
-# Torch
-PRODUCT_PACKAGES := \
-    Torch
-
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_jlo
 PRODUCT_DEVICE := jlo

@@ -8,7 +8,7 @@ TARGET_SPECIFIC_HEADER_PATH += device/sony/jlo/include
 
 TARGET_KERNEL_CONFIG :=  cm_tamsui_jlo_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/jlo/config/cmdline.txt
-#TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7-13.04/bin/arm-linux-gnueabihf-
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.7-13.04/bin/arm-linux-gnueabihf-
 
 # WiFi
 BOARD_WLAN_DEVICE                := bcmdhd
