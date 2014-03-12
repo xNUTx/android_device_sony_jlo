@@ -46,10 +46,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/init.sony.usb.rc:root/init.sony.usb.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/fstab.sony:root/fstab.sony
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/fstab.sony:root/fstab.sony \
+    $(LOCAL_PATH)/config/twrp.fstab:root/etc/twrp.fstab \
+    $(LOCAL_PATH)/config/twrp.fstab:recovery/root/etc/twrp.fstab \
     $(LOCAL_PATH)/config/vold.fstab:system/etc/vold.fstab
+
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
