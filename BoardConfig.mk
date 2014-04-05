@@ -4,6 +4,8 @@
 #inherit from the common tamsui definitions
 -include device/sony/tamsui-common/BoardConfigCommon.mk
 
+DEVICE_RESOLUTION := 480x854
+
 TARGET_SPECIFIC_HEADER_PATH += device/sony/jlo/include
 
 TARGET_KERNEL_CONFIG :=  cm_tamsui_jlo_defconfig
@@ -28,6 +30,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/jlo/bluedroid
 
 # CM Hardware tunables
 # BOARD_HARDWARE_CLASS += device/sony/jlo/cmhw
+
+# jlo is low-ram device
+# PRODUCT_PROPERTY_OVERRIDES += ro.config.low_ram=true
 
 
 # Partition information
