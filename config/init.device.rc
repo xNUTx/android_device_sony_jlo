@@ -6,12 +6,25 @@ on early-boot
     write /sys/class/android_usb/android0/enable 1
     exec /system/bin/battery_charging
 
+    # Setup permissions for accelerometer
+    chown root system /dev/akm8975_dev
+    chmod 0660 /dev/akm8975_dev
+    chown root system /data/misc/akmd_set.txt
+    chmod 0660 /data/misc/akmd_set.txt
+    chown system system /sys/class/compass/akm8975/enable_acc
+    chown system system /sys/class/compass/akm8975/enable_mag
+    chown system system /sys/class/compass/akm8975/enable_ori
+    chown system system /sys/class/compass/akm8975/delay_acc
+    chown system system /sys/class/compass/akm8975/delay_mag
+    chown system system /sys/class/compass/akm8975/delay_ori
+    chown system system /sys/class/compass/akm8975/accel
+
     chown root system /sys/class/input/input5/mode
     chown root system /sys/class/input/input5/bandwidth
     chown root system /sys/class/input/input5/delay
 
 on post-fs
-    #Permission for Lights
+    # Permission for Lights
     chown system system /sys/class/led/fih_led/control
     chown system system /sys/devices/virtual/graphics/fb0/msmfb_bl0/brightness
 
@@ -20,6 +33,11 @@ on post-fs
 
     #buffer fix
     write /sys/module/msm_fb/parameters/align_buffer 1
+ 
+    # Accelerometer
+service akmd /system/bin/akmd8975
+    class main
+    user root
     
 service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
     --use_baudrate_for_download --tosleep 20000 --scopcm 0,4,0,0,0,0,0,0,3,0 \
