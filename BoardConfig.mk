@@ -25,6 +25,8 @@ BOARD_LEGACY_NL80211_STA_EVENTS  := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/jlo/bluedroid
 
+# Device specific hardware abstract layers 
+TARGET_PROVIDES_LIBLIGHT := true
 
 # CM Hardware tunables
 # BOARD_HARDWARE_CLASS += device/sony/jlo/cmhw

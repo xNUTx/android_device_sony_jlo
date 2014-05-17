@@ -74,6 +74,10 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/sony/jlo/jlo-vendor.mk)
 
+# Light
+PRODUCT_PACKAGES += \
+    lights.msm7x27a
+
 # Wifi
 BOARD_WLAN_DEVICE_REV := bcm4330_b1
 WIFI_BAND             := 802_11_ABG
