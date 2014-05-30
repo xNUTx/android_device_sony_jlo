@@ -38,18 +38,14 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Configuration scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/init.device.rc:root/init.device.rc \
-    device/sony/tamsui-common/prebuilt/logo_H.rle:root/logo.rle
+    $(LOCAL_PATH)/rootdir/init.device.rc:root/init.device.rc
 
 # USB function switching
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/init.sony.usb.rc:root/init.sony.usb.rc
+    $(LOCAL_PATH)/rootdir/init.sony.usb.rc:root/init.sony.usb.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/fstab.sony:root/fstab.sony
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/vold.fstab:system/etc/vold.fstab
+    $(LOCAL_PATH)/rootdir/fstab.sony:root/fstab.sony
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
@@ -57,18 +53,18 @@ PRODUCT_COPY_FILES += \
 
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
-    $(LOCAL_PATH)/config/7x27a_kp.kl:system/usr/keylayout/7x27a_kp.kl \
-    $(LOCAL_PATH)/config/cyttsp_i2c_tma340.idc:system/usr/idc/cyttsp_i2c_tma340.idc \
-    $(LOCAL_PATH)/config/cyttsp_i2c_tma340.kl:system/usr/keylayout/cyttsp_i2c_tma340.kl \
-    $(LOCAL_PATH)/config/fih_gpio-keys.kl:system/usr/keylayout/fih_gpio-keys.kl \
-    $(LOCAL_PATH)/config/simple_remote_appkey.kl:system/usr/keylayout/simple_remote_appkey.kl \
-    $(LOCAL_PATH)/config/synaptics-t1320-tskey.kl:system/usr/keylayout/synaptics-t1320-tskey.kl \
-    $(LOCAL_PATH)/config/7x27a_kp.kcm:system/usr/keychars/7x27a_kp.kcm \
-    $(LOCAL_PATH)/config/cyttsp_i2c_tma340.kcm:system/usr/keychars/cyttsp_i2c_tma340.kcm \
-    $(LOCAL_PATH)/config/fih_gpio-keys.kcm:system/usr/keychars/fih_gpio-keys.kcm \
-    $(LOCAL_PATH)/config/simple_remote_appkey.kcm:system/usr/keychars/simple_remote_appkey.kcm \
-    $(LOCAL_PATH)/config/synaptics-t1320-tskey.kcm:system/usr/keychars/synaptics-t1320-tskey.kcm
+    $(LOCAL_PATH)/rootdir/system/usr/idc/cyttsp_i2c_tma340.idc:system/usr/idc/cyttsp_i2c_tma340.idc \
+    $(LOCAL_PATH)/rootdir/system/usr/keylayout/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
+    $(LOCAL_PATH)/rootdir/system/usr/keylayout/7x27a_kp.kl:system/usr/keylayout/7x27a_kp.kl \
+    $(LOCAL_PATH)/rootdir/system/usr/keylayout/cyttsp_i2c_tma340.kl:system/usr/keylayout/cyttsp_i2c_tma340.kl \
+    $(LOCAL_PATH)/rootdir/system/usr/keylayout/fih_gpio-keys.kl:system/usr/keylayout/fih_gpio-keys.kl \
+    $(LOCAL_PATH)/rootdir/system/usr/keylayout/simple_remote_appkey.kl:system/usr/keylayout/simple_remote_appkey.kl \
+    $(LOCAL_PATH)/rootdir/system/usr/keylayout/synaptics-t1320-tskey.kl:system/usr/keylayout/synaptics-t1320-tskey.kl \
+    $(LOCAL_PATH)/rootdir/system/usr/keychars/7x27a_kp.kcm:system/usr/keychars/7x27a_kp.kcm \
+    $(LOCAL_PATH)/rootdir/system/usr/keychars/cyttsp_i2c_tma340.kcm:system/usr/keychars/cyttsp_i2c_tma340.kcm \
+    $(LOCAL_PATH)/rootdir/system/usr/keychars/fih_gpio-keys.kcm:system/usr/keychars/fih_gpio-keys.kcm \
+    $(LOCAL_PATH)/rootdir/system/usr/keychars/simple_remote_appkey.kcm:system/usr/keychars/simple_remote_appkey.kcm \
+    $(LOCAL_PATH)/rootdir/system/usr/keychars/synaptics-t1320-tskey.kcm:system/usr/keychars/synaptics-t1320-tskey.kcm
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
