@@ -7,7 +7,7 @@
 TARGET_SPECIFIC_HEADER_PATH += device/sony/jlo/include
 
 # Kernel
-TARGET_KERNEL_CONFIG :=  cm_tamsui_jlo_defconfig
+TARGET_KERNEL_CONFIG :=  cyanogen_jlo_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/jlo/rootdir/cmdline.txt
 
 # WiFi
