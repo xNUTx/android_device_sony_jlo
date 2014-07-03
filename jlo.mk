@@ -36,16 +36,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# Configuration scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.device.rc:root/init.device.rc
-
-# USB function switching
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.sony.usb.rc:root/init.sony.usb.rc
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.device.rc:root/init.device.rc \
+    $(LOCAL_PATH)/rootdir/init.sony.usb.rc:root/init.sony.usb.rc \
     $(LOCAL_PATH)/rootdir/fstab.sony:root/fstab.sony
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/sbin/rmt_storage:root/sbin/rmt_storage \
+    $(LOCAL_PATH)/rootdir/sbin/ta_rmt_service:root/sbin/ta_rmt_service \
+    $(LOCAL_PATH)/rootdir/sbin/tad:root/sbin/tad \
+    $(LOCAL_PATH)/rootdir/sbin/wait4tad:root/sbin/wait4tad
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
