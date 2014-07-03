@@ -30,3 +30,10 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
     group bluetooth net_bt_admin qcom_oncrpc
     disabled
     oneshot
+
+# SEMC, TA Daemon
+service tad /sbin/tad /dev/block/mmcblk0 8,16,256
+    class trimarea
+    user root
+    group root
+    socket tad stream 0660 system system
