@@ -51,6 +51,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/bootrec-device:recovery/bootrec-device
 
+# Offline Charging
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/animations/charging_animation_01.rle:system/etc/chgani/ca01.rle \
+    $(LOCAL_PATH)/animations/charging_animation_02.rle:system/etc/chgani/ca02.rle \
+    $(LOCAL_PATH)/animations/charging_animation_03.rle:system/etc/chgani/ca03.rle \
+    $(LOCAL_PATH)/animations/charging_animation_04.rle:system/etc/chgani/ca04.rle \
+    $(LOCAL_PATH)/animations/charging_animation_05.rle:system/etc/chgani/ca05.rle \
+    $(LOCAL_PATH)/animations/charging_animation_06.rle:system/etc/chgani/ca06.rle \
+    $(LOCAL_PATH)/animations/charging_animation_07.rle:system/etc/chgani/ca07.rle
+
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/usr/idc/cyttsp_i2c_tma340.idc:system/usr/idc/cyttsp_i2c_tma340.idc \
