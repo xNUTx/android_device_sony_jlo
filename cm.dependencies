@@ -1,7 +1,13 @@
 [
   {
-    "repository": "TamsuiCM11/android_device_sony_tamsui-common",
+    "repository": "xNUTx/android_device_sony_tamsui-common",
     "target_path": "device/sony/tamsui-common"
     "branch": "cm-11.0"
  },
+
+ {
+   "repository": "xNUTx/proprietary_vendor_sony",
+   "target_path": "vendor/sony",
+   "branch": "cm-11.0"
+ }
 ]
